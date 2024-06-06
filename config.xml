@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd">
+       
+    <context.annotation-config/>   
+
+
+
+	<!-- bean definitions here  street or city String he toh yaaha autowring nhi hoga -->
+	<bean  class="com.springcore.autowiredanotation.Address"  name="address">
+		<property name="street" value="Temp Street"/>
+				<property name="city" value="dehli"/>
+				</bean>
+				
+				<bean  class="com.springcore.autowiredanotation.Address"  name="address2">
+		<property name="street" value="Temp Street2"/>
+				<property name="city" value="mumbai"/>
+		</bean>
+		<!-- yaha kr skte he autowiring  becose addresh object type ka he -->
+			<bean  class="com.springcore.autowiredanotation.Emp"  name="emp" />
+			
+			
+			<bean class="org.springframework.context.annotation.CommonAnnotationBeanPostProcessor"/><!--  yeah sirf postorpre ko enable krene ke liya he -->
+
+			
+			
+	<!-- byType bean check krege unper hum adressh1 bhi de skte h or do obecect hoga toh cunsufusue ohga or exception dega
+	     byName me refrence check krega
+	     bytype me bean check hogi
+	     
+	     byconstructor bhi hota h
+	     byname me setter ko call krege name ke base  pe
+	     byconstructor ne constuctor ko call krega
+	     bytype me type ko ceck krega -->
+				
+		
+		
+
+	
+</beans>
+
+
+
+
+  
+  
+ 
+
+  
+
+  
+
+
+  
+
+
